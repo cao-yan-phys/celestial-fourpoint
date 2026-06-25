@@ -2,7 +2,7 @@
 
 A calculator evaluating four-point integrals over GW source directions, with each external leg chosen as a PTA or astrometric antenna response.
 
-For unit sky directions $p_i$, polarization signs $\epsilon_i=\pm1$, and observables $X_i\in\{P,A\}$, the evaluated quantity is
+For unit sky directions $p_i$, polarization signs $\epsilon_i=\pm1$, and observables $`X_i\in\{\texttt{P},\texttt{A}\}`$, the evaluated quantity is
 
 $$
 \int_{S^2}\frac{d\Omega}{4\pi}\prod_{i=1}^4 R^{\epsilon_i}_{X_i}(p_i,\Omega).
