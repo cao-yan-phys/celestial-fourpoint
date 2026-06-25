@@ -26,6 +26,8 @@ $$
 \Delta p^a(n,q;e)=\frac{1}{2}\left[\frac{n^a-q^a}{1-q\cdot n}n^b n^c e_{bc}-e^a_{\ b}n^b\right],\qquad m_\sigma(p)=\frac{e_\theta(p)+i\sigma e_\phi(p)}{\sqrt{2}}.
 $$
 
+The astrometric external leg is a spin-1 tangent response. The normalization above is chosen from the single-leg descendant relation to the scalar PTA response.
+
 A cached finite-spectral approximation with $L=\ell_{\max}$ is provided. The default cached kernel uses $L=15$.
 
 ## Use
