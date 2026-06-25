@@ -2,13 +2,13 @@
 
 A calculator evaluating four-point integrals over GW source directions, with each external leg chosen as a PTA or astrometric antenna response.
 
-For unit sky directions $p_i$, helicities $\epsilon_i=\pm1$, and observables $X_i\in\{P,A\}$, the evaluated quantity is
+For unit sky directions $p_i$, polarization signs $\epsilon_i=\pm1$, and observables $X_i\in\{P,A\}$, the evaluated quantity is
 
 $$
 \int_{S^2}\frac{d\Omega}{4\pi}\prod_{i=1}^4 R^{\epsilon_i}_{X_i}(p_i,\Omega).
 $$
 
-Here $\Omega$ is the source direction. The PTA response is
+Here $\Omega$ is the source direction, and $\epsilon=\pm1$ labels the circular polarization $e^\epsilon=e^+ + i\epsilon e^\times$ with helicity $2\epsilon=\pm2$. The PTA response is
 
 $$
 R_P^\epsilon(p,\Omega)=\frac{1}{2}\frac{p^a p^b e^\epsilon_{ab}(-\Omega)}{1-\Omega\cdot p}.
@@ -26,7 +26,11 @@ $$
 \Delta p^a(n,q;e)=\frac{1}{2}\left[\frac{n^a-q^a}{1-q\cdot n}n^b n^c e_{bc}-e^a_{\ b}n^b\right],\qquad m_\sigma(p)=\frac{e_\theta(p)+i\sigma e_\phi(p)}{\sqrt{2}}.
 $$
 
-The astrometric external leg is a spin-1 tangent response. The normalization above is chosen from the single-leg descendant relation to the scalar PTA response.
+After projection onto $m_{-\epsilon}$, the astrometric external leg has spin weight $-\epsilon$ in the direction $p$. The single-leg descendant operator is the spin-weighted angular derivative $D^{+1}=\eth$, $D^{-1}=\bar{\eth}$. The normalization in the astrometric response is fixed by
+
+$$
+D^\epsilon\left[\frac{\Delta p(p,\Omega;e^\epsilon(-\Omega))\cdot m_{-\epsilon}(p)}{-2\sqrt{2}}\right]=R_P^\epsilon(p,\Omega),\qquad D^\epsilon R_A^\epsilon(p,\Omega)=\epsilon R_P^\epsilon(p,\Omega).
+$$
 
 A cached finite-spectral approximation with $L=\ell_{\max}$ is provided. The default cached kernel uses $L=15$.
 
