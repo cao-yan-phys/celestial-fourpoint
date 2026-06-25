@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "celestial-fourpoint"
+version = "0.1.0"
+description = "Fast validated four-point kernels for PTA and astrometry."
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+authors = [
+  {name = "Celestial Fourpoint contributors"}
+]
+dependencies = [
+  "numpy",
+  "scipy",
+  "sympy",
+  "mpmath",
+]
+
+[project.optional-dependencies]
+test = ["pytest"]
+cuda = ["cupy-cuda12x"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-ra"
